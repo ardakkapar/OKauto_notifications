@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ionic basics</title>
+  <script type="module" src="https://cdn.jsdelivr.net/npm/@ionic/core/dist/ionic/ionic.esm.js"></script>
+  <script nomodule src="https://cdn.jsdelivr.net/npm/@ionic/core/dist/ionic/ionic.js"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@ionic/core/css/ionic.bundle.css" />
+  <link rel="stylesheet" href="notifications.css">
+</head>
+<body>
+  <ion-app>
+    <ion-header translucent="true">
+      <ion-toolbar>
+        <ion-title>Уведомления</ion-title>
+      </ion-toolbar>
+    </ion-header>
+    
+    <ion-content fullscreen = "true">
+      <ion-header collapse="condense">
+        <ion-toolbar>
+          <ion-title size="large">Уведомления</ion-title>
+        </ion-toolbar>
+      </ion-header>
+      <div style="border-top: 1px solid #bcbcbc; opacity: 0.2; margin-top: 12px; margin-bottom: 8px; margin-right:16px; margin-left:16px;"></div>
+      <div class = "notif-card">
+        <script src="./notifications.js"></script>
+      </div>
+    </ion-content>
+    
+    <ion-toolbar>
+      <ion-tabs>
+        <ion-tab-bar slot="bottom" class = "tabs">
+          <ion-tab-button tab="shtrafs">
+            <ion-label>Штрафы</ion-label>
+            <ion-icon name="car-sport-outline"></ion-icon>
+          </ion-tab-button>
+          <ion-tab-button tab="insurance">
+            <ion-label>Страховка</ion-label>
+            <ion-badge class = "badge" color="danger">-10%</ion-badge>
+            <ion-icon name="shield-half-outline"></ion-icon>
+          </ion-tab-button>
+          <ion-tab-button  tab="notifications">
+            <ion-label class="notif-label">Уведомления</ion-label>
+            <ion-icon class ="notif-tab" name="notifications"></ion-icon>
+          </ion-tab-button>
+          <ion-tab-button tab="settings">
+            <ion-label>Настройки</ion-label>
+            <ion-icon  name="settings"></ion-icon>
+          </ion-tab-button>
+        </ion-tab-bar>
+      </ion-tabs>
+    </ion-toolbar>
+  </ion-app>
+</body>
+</html>
